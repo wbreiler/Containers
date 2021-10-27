@@ -1,0 +1,10 @@
+version: "2.1"
+services:
+  notes:
+    image: zadam/trilium
+    container_name: notes
+    volumes:
+      - ./data:/home/node/trilium-data
+    ports:
+      - 8081:8080
+    restart: unless-stopped
