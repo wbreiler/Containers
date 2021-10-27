@@ -1,36 +1,22 @@
-
----
-version: '3'
+version: '3.3'
 
 services:
   drupal:
-    build: ./
-    image: geerlingguy/drupal:latest
-    container_name: drupal
-    environment:
-      DRUPAL_DATABASE_HOST: drupal-mysql
-      DRUPAL_DATABASE_PORT: 3306
-      DRUPAL_DATABASE_NAME: drupal
-      DRUPAL_DATABASE_USERNAME: drupal
-      DRUPAL_DATABASE_PASSWORD: drupal
-      DRUPAL_DATABASE_PREFIX: drupal
-      # Generate a salt with: `php -r "echo bin2hex(random_bytes(25));"`
-      DRUPAL_HASH_SALT: db0de8a1556aa5348f87cfc950cd2c9641713d46e9412c8b05
+    image: drupal:latest
     ports:
-      - "80:80"
-    restart: always
-    # Uncomment the volumes line and set to the local path of your Drupal
-    # installation, if you need to work with a local codebase.
+      - 80:80
     volumes:
-      - ./data:/var/www/html:rw,deleated
+      - ./modules:/var/www/html/modules
+      - ./profiles:/var/www/html/profiles
+      - ./themes:/var/www/html/themes
+      - ./sites:/var/www/html/sites
+    restart: always
 
-  mysql:
-    image: mariadb:10
-    container_name: drupal-mysql
+  postgres:
+    image: postgres:10
     environment:
-      MARIADB_RANDOM_ROOT_PASSWORD: 'yes'
-      MARIADB_DATABASE: drupal
-      MARIADB_USER: drupal
-      MARIADB_PASSWORD: drupal
-    ports:
-      - "3306:3306"
+      POSTGRES_PASSWORD: your_postgres_password
+    volumes:
+        - ./db_data:/var/lib/postgresql/data
+    restart: always
+
