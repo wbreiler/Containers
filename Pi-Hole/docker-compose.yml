@@ -1,3 +1,5 @@
+#Pi-hole in Docker is basically impossibel because of the way systemd does literally everything
+# and it's impossible for Pi-Hole to use port 53 since systemd needs it for some reason 🤷
 version: "3"
 
 # More info at https://github.com/pi-hole/docker-pi-hole/ and https://docs.pi-hole.net/
