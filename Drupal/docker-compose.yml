@@ -4,7 +4,7 @@ services:
   drupal:
     image: drupal:latest
     ports:
-      - 80:80
+      - 81:80
     volumes:
       - ./modules:/var/www/html/modules
       - ./profiles:/var/www/html/profiles
