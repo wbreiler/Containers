@@ -1,0 +1,10 @@
+Minecraft/data/*
+Nextcloud/data/*
+Nextcloud/db/*
+UptimeKuma/data/*
+Homebridge/data/*
+HomeAssistant/.cloud/*
+HomeAssistant/.storage/*
+HomeAssistant/.HA_VERSION
+Code-Server/config/*
+Pi-hole/etc-*
