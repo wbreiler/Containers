@@ -19,7 +19,7 @@ services:
     links:
       - db
     volumes:
-      - /home/ubuntu/Containers/Nextcloud/data:/var/www/html
+      - ./data:/var/www/html
     environment:
       - MYSQL_PASSWORD=@Sofie3722
       - MYSQL_DATABASE=nextcloud

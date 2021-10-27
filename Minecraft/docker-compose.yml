@@ -9,7 +9,7 @@ services:
       EULA: "TRUE"
       TYPE: "FORGE"
     volumes:
-      - /home/ubuntu/Containers/Minecraft/data:/data
+      - ./data:/data
     tty: true
     stdin_open: true
     restart: unless-stopped

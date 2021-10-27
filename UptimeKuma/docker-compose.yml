@@ -5,6 +5,6 @@ services:
     ports:
       - 3001:3001
     volumes:
-      - /home/ubuntu/Containers/UptimeKuma/data:/app/data
+      - ./data:/app/data
     stdin_open: true
     restart: always
