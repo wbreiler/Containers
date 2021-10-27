@@ -1,8 +1,8 @@
 version: "2.1"
 services:
-  code-server:
-    image: lscr.io/linuxserver/code-server
-    container_name: code-server
+  heimdall:
+    image: lscr.io/linuxserver/heimdall
+    container_name: heimdall
     environment:
       - PUID=1000
       - PGID=1000
@@ -10,5 +10,6 @@ services:
     volumes:
       - ./config:/config
     ports:
-      - 8443:8443
+      - 80:80
+      - 443:443
     restart: unless-stopped
