@@ -1,6 +1,12 @@
 # Raspberry Pi Projects
-**Note: All done using Docker Swarm**
-- Docker Swarm has been easier to set up in the past than k3s/k8s/Kubernetes in the past for me
+---
+#### FAQ:
+- Why use Docker Swarm?
+	- In my experience, Docker Swarm has been easier and quicker to set up than any flavor of Kubernetes, even k3s.
+- Why use Raspberry Pis?
+	- Raspberry Pis are cheap, easy to set up, and aren't expensive to maintain.
+- Why containerize everything?
+	- I've found that containerization is the best way to get the most out of a Raspberry Pi, and it makes running a home lab easier and cheaper without an entire rack and a bunch of servers.
 #### Prerequisites:
 - Raspberry Pi(s) running Ubuntu Server 64 bit
 - Docker
