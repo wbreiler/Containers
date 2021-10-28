@@ -12,10 +12,10 @@
 - Docker Compose files 
 	- `$ scp -r ~/Code/RPi-Projects/Misc/Containers ubuntu@<node's hostname/ip>:/home/ubuntu`
 - Docker Swarm
-	- `docker swarm join --token SWMTKN-1-0jctkiheup5uhi9hvmft69al48v383qqox3pkls834n4rjn4es-1waosuxqdkvh5qn6ibevbs9a3 10.0.0.149:2377`
+	- `$ docker swarm join --token SWMTKN-1-0jctkiheup5uhi9hvmft69al48v383qqox3pkls834n4rjn4es-1waosuxqdkvh5qn6ibevbs9a3 10.0.0.149:2377`
 #### Instructions:
 - Minecraft Server
-	 `$ cd ~/Containers/Minecraft`
+	- `$ cd ~/Containers/Minecraft`
 	- `$ sudo docker-compose up -d`
 	- `$ sudo docker-compose down --volumes`
 	- `$ sudo docker-compose push`
@@ -27,11 +27,11 @@
 	- `$ sudo docker-compose push`
 	- `$ sudo docker stack deploy --compose-file docker-compose.yml hass`
 - Homebridge
-	-  `$ cd ~/Containers/Homebridge`
-	-  `$ sudo docker-compose up -d`
-	-  `$ sudo docker-compose down --volumes`
-	-  `$ sudo docker-compose push`
-	-  `$ sudo docker stack deploy --compose-file docker-compose.yml hbridge`
+	- `$ cd ~/Containers/Homebridge`
+	- `$ sudo docker-compose up -d`
+	- `$ sudo docker-compose down --volumes`
+	- `$ sudo docker-compose push`
+	- `$ sudo docker stack deploy --compose-file docker-compose.yml hbridge`
 - Self-hosted monitoring (**Uptime Kuma**/Statping/Shynet)
 	- `$ cd ~/Containers/UptimeKuma`
 	- `$ sudo docker-compose up -d`
