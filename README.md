@@ -1,7 +1,8 @@
-Raspberry Pi Projects
-Note: All done using Docker Swarm
+# Raspberry Pi Projects
+**Note: All done using Docker Swarm**
 - Docker Swarm has been easier to set up in the past than k3s/k8s/Kubernetes in the past for me
-### Prerequisites:
+#### Prerequisites:
+- Raspberry Pi(s) running Ubuntu Server 64 bit
 - Docker
 	- `$ curl -fsSL https://get.docker.com -o get-docker.sh`
 	- `$ sudo sh get-docker.sh`
@@ -12,6 +13,7 @@ Note: All done using Docker Swarm
 	- `$ scp -r ~/Code/RPi-Projects/Misc/Containers ubuntu@<node's hostname/ip>:/home/ubuntu`
 - Docker Swarm
 	- `docker swarm join --token SWMTKN-1-0jctkiheup5uhi9hvmft69al48v383qqox3pkls834n4rjn4es-1waosuxqdkvh5qn6ibevbs9a3 10.0.0.149:2377`
+#### Instructions:
 - Minecraft Server
 	 `$ cd ~/Containers/Minecraft`
 	- `$ sudo docker-compose up -d`
