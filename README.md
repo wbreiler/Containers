@@ -1,0 +1,69 @@
+Raspberry Pi Projects
+Note: All done using Docker Swarm
+- Docker Swarm has been easier to set up in the past than k3s/k8s/Kubernetes in the past for me
+### Prerequisites:
+- Docker
+	- `$ curl -fsSL https://get.docker.com -o get-docker.sh`
+	- `$ sudo sh get-docker.sh`
+- Docker Compose
+	- `$ sudo curl -L "https://github.com/docker/compose/releases/download/v2.0.1/docker-compose-linux-aarch64" -o /usr/local/bin/docker-compose`
+	- `$ sudo chmod +x /usr/local/bin/docker-compose`
+- Docker Compose files 
+	- `$ scp -r ~/Code/RPi-Projects/Misc/Containers ubuntu@<node's hostname/ip>:/home/ubuntu`
+- Docker Swarm
+	- `docker swarm join --token SWMTKN-1-0jctkiheup5uhi9hvmft69al48v383qqox3pkls834n4rjn4es-1waosuxqdkvh5qn6ibevbs9a3 10.0.0.149:2377`
+- Minecraft Server
+	 `$ cd ~/Containers/Minecraft`
+	- `$ sudo docker-compose up -d`
+	- `$ sudo docker-compose down --volumes`
+	- `$ sudo docker-compose push`
+	- `$ sudo docker stack deploy --compose-file docker-compose.yml mc`
+- Home Assistant
+	- `$ cd ~/Containers/HomeAssistant`
+	- `$ sudo docker-compose up -d`
+	- `$ sudo docker-compose down --volumes`
+	- `$ sudo docker-compose push`
+	- `$ sudo docker stack deploy --compose-file docker-compose.yml hass`
+- Homebridge
+	-  `$ cd ~/Containers/Homebridge`
+	-  `$ sudo docker-compose up -d`
+	-  `$ sudo docker-compose down --volumes`
+	-  `$ sudo docker-compose push`
+	-  `$ sudo docker stack deploy --compose-file docker-compose.yml hbridge`
+- Self-hosted monitoring (**Uptime Kuma**/Statping/Shynet)
+	- `$ cd ~/Containers/UptimeKuma`
+	- `$ sudo docker-compose up -d`
+	- `$ sudo docker-compose down --volumes`
+	- `$ sudo docker-compose push`
+	- `$ sudo docker stack deploy --compose-file docker-compose.yml uptimek`
+- LibreNMS (🤷)
+- Personal Cloud
+	- `$ cd ~/Containers/Nextcloud`
+	- `$ sudo docker-compose up -d`
+	- `$ sudo docker-compose down --volumes`
+	- `$ sudo docker-compose push`
+	- `$ sudo docker stack deploy --compose-file docker-compose.yml nextcloud`
+- Code Server
+	- `$ cd ~/Containers/CodeServer`
+	- `$ sudo docker-compose up -d`
+	- `$ sudo docker-compose down --volumes`
+	- `$ sudo docker-compose push`
+	- `$ sudo docker stack deploy --compose-file docker-compose.yml codeserver`
+- Drupal
+	- `$ cd ~/Containers/Drupal`
+	- `$ sudo docker-compose up -d`
+	- `$ sudo docker-compose down --volumes`
+	- `$ sudo docker-compose push`
+	- `$ sudo docker stack deploy --compose-file docker-compose.yml drupal`
+- Pastebin
+	- `$ cd ~/Containers/Pastebin`
+	- `$ sudo docker-compose up -d`
+	- `$ sudo docker-compose down --volumes`
+	- `$ sudo docker-compose push`
+	- `$ sudo docker stack deploy --compose-file docker-compose.yml pastebin`
+- Notes
+	- `$ cd ~/Containers/Notes`
+	- `$ sudo docker-compose up -d`
+	- `$ sudo docker-compose down --volumes`
+	- `$ sudo docker-compose push`
+	- `$ sudo docker stack deploy --compose-file docker-compose.yml notes`-
