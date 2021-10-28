@@ -18,7 +18,7 @@
 - Docker Compose files 
 	- `$ scp -r ~/Code/RPi-Projects/Misc/Containers ubuntu@<node's hostname/ip>:/home/ubuntu`
 - Docker Swarm
-	- `$ docker swarm join --token SWMTKN-1-0jctkiheup5uhi9hvmft69al48v383qqox3pkls834n4rjn4es-1waosuxqdkvh5qn6ibevbs9a3 10.0.0.149:2377`
+	- `$ sudo docker swarm join --token [REDACTED token] <master node's IP>:2377`
 #### Instructions:
 - Minecraft Server
 	- `$ cd ~/Containers/Minecraft`
