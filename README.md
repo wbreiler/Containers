@@ -10,7 +10,7 @@
 - Why not make this an Ansible playbook?
 	- I'd love to actually, I just don't know Ansible at all. If someone would love to give me some pointers or even contribute a playbook, submit a PR!
 #### Prerequisites:
-- Raspberry Pi(s) running Ubuntu Server 64 bit
+- Raspberry Pi(s) running [Ubuntu Server](https://ubuntu.com/download/raspberry-pi) 64 bit
     - I'm using 2x Raspberry Pi CM4 8GB RAM, and a Raspberry Pi 3B+ but you can use whatever you have lying around.
 - Docker
 	- `$ curl -fsSL https://get.docker.com -o get-docker.sh`
@@ -24,56 +24,56 @@
 - Docker Swarm
 	- `# docker swarm join --token <token> <master node's IP>:2377`
 #### Instructions:
-- Minecraft Server
+- [Minecraft Server](https://github.com/itzg/docker-minecraft-server)
 	- `$ cd ~/Containers/Minecraft`
 	- `# docker-compose up -d`
 	- `# docker-compose down --volumes`
 	- `# docker-compose push`
 	- `# docker stack deploy --compose-file docker-compose.yml mc`
-- Home Assistant
+- [Home Assistant](https://home-assistant.io/)
 	- `$ cd ~/Containers/HomeAssistant`
 	- `# docker-compose up -d`
 	- `# docker-compose down --volumes`
 	- `# docker-compose push`
 	- `# docker stack deploy --compose-file docker-compose.yml hass`
-- Homebridge
+- [Homebridge](http://homebridge.io/)
 	- `$ cd ~/Containers/Homebridge`
 	- `# docker-compose up -d`
 	- `# docker-compose down --volumes`
 	- `# docker-compose push`
 	- `# docker stack deploy --compose-file docker-compose.yml hbridge`
-- Self-hosted monitoring (**Uptime Kuma**/Statping/Shynet)
+- Self-hosted monitoring ([**Uptime Kuma**](https://github.com/louislam/uptime-kuma)/Statping/Shynet)
 	- `$ cd ~/Containers/UptimeKuma`
 	- `# docker-compose up -d`
 	- `# docker-compose down --volumes`
 	- `# docker-compose push`
 	- `# docker stack deploy --compose-file docker-compose.yml uptimek`
 - LibreNMS (🤷)
-- Personal Cloud
+- [Personal Cloud](https://github.com/nextcloud/docker)
 	- `$ cd ~/Containers/Nextcloud`
 	- `# docker-compose up -d`
 	- `# docker-compose down --volumes`
 	- `# docker-compose push`
 	- `# docker stack deploy --compose-file docker-compose.yml nextcloud`
-- Code Server
+- [Code Server](https://github.com/cdr/code-server)
 	- `$ cd ~/Containers/CodeServer`
 	- `# docker-compose up -d`
 	- `# docker-compose down --volumes`
 	- `# docker-compose push`
 	- `# docker stack deploy --compose-file docker-compose.yml codeserver`
-- Drupal
+- [Drupal](https://drupal.org)
 	- `$ cd ~/Containers/Drupal`
 	- `# docker-compose up -d`
 	- `# docker-compose down --volumes`
 	- `# docker-compose push`
 	- `# docker stack deploy --compose-file docker-compose.yml drupal`
-- Pastebin
+- [Pastebin](https://github.com/pawelmalak/snippet-box)
 	- `$ cd ~/Containers/Pastebin`
 	- `# docker-compose up -d`
 	- `# docker-compose down --volumes`
 	- `# docker-compose push`
 	- `# docker stack deploy --compose-file docker-compose.yml pastebin`
-- Notes
+- [Notes](https://github.com/zadam/trilium)
 	- `$ cd ~/Containers/Notes`
 	- `# docker-compose up -d`
 	- `# docker-compose down --volumes`
