@@ -48,7 +48,7 @@
 	- `# docker-compose down --volumes`
 	- `# docker-compose push`
 	- `# docker stack deploy --compose-file docker-compose.yml uptimek`
-- LibreNMS (🤷)
+- ~~LibreNMS~~
 - [Personal Cloud](https://github.com/nextcloud/docker)
 	- `$ cd ~/Containers/Nextcloud`
 	- `# docker-compose up -d`
@@ -79,4 +79,9 @@
 	- `# docker-compose down --volumes`
 	- `# docker-compose push`
 	- `# docker stack deploy --compose-file docker-compose.yml notes`
-- 
+- [Mailcow](https://github.com/mailcow/mailcow-dockerized)
+	- `$ cd ~/Containers/Mailcow`
+	- `# docker-compose up -d`
+	- `# docker-compose down --volumes`
+	- `# docker-compose push`
+	- `# docker stack deploy --compose-file docker-compose.yml mailcow`
