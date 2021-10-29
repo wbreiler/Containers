@@ -1,4 +1,4 @@
-# Raspberry Pi Projects
+# Containerized Home Lab (WIP)
 ---
 #### FAQ:
 - Why use Docker Swarm?
