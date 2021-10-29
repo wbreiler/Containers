@@ -1,4 +1,4 @@
-# Raspberry Pi Projects (WIP)
+# Raspberry Pi Projects
 ---
 #### FAQ:
 - Why use Docker Swarm?
@@ -11,7 +11,7 @@
 	- I'd love to actually, I just don't know Ansible at all. If someone would love to give me some pointers or even contribute a playbook, submit a PR!
 #### Prerequisites:
 - Raspberry Pi(s) running Ubuntu Server 64 bit
-	- I use 2x Raspberry Pi CM4s (both with 8GB RAM) and a 3B+, but you can use whatever you get your hands on :)
+    - I'm using 2x Raspberry Pi CM4 8GB RAM, and a Raspberry Pi 3B+ but you can use whatever you have lying around.
 - Docker
 	- `$ curl -fsSL https://get.docker.com -o get-docker.sh`
 	- `# sh get-docker.sh`
@@ -19,35 +19,64 @@
 	- `# curl -L "https://github.com/docker/compose/releases/download/v2.0.1/docker-compose-linux-aarch64" -o /usr/local/bin/docker-compose`
 	- `# chmod +x /usr/local/bin/docker-compose`
 - Docker Compose files 
-	- `$ scp -r ~/Code/RPi-Projects/Misc/Containers ubuntu@<node's hostname/ip>:/home/ubuntu`
+	- `$ scp -r ~/Code/RPi-Projects/Misc/Containers ubuntu@<node's hostname/ip>:/home/ubuntu` OR
+	- `$ git clone https://github.com/wbreiler/Containers`
 - Docker Swarm
 	- `# docker swarm join --token <token> <master node's IP>:2377`
 #### Instructions:
-- [Minecraft Server](https://github.com/itzg/docker-minecraft-server) 
+- Minecraft Server
 	- `$ cd ~/Containers/Minecraft`
+	- `# docker-compose up -d`
+	- `# docker-compose down --volumes`
+	- `# docker-compose push`
 	- `# docker stack deploy --compose-file docker-compose.yml mc`
-- [Home Assistant](https://home-assistant.io/)
+- Home Assistant
 	- `$ cd ~/Containers/HomeAssistant`
+	- `# docker-compose up -d`
+	- `# docker-compose down --volumes`
+	- `# docker-compose push`
 	- `# docker stack deploy --compose-file docker-compose.yml hass`
-- [Homebridge](https://homebridge.io)
+- Homebridge
 	- `$ cd ~/Containers/Homebridge`
+	- `# docker-compose up -d`
+	- `# docker-compose down --volumes`
+	- `# docker-compose push`
 	- `# docker stack deploy --compose-file docker-compose.yml hbridge`
-- Self-hosted monitoring ([Uptime Kuma](https://github.com/louislam/uptime-kuma))
+- Self-hosted monitoring (**Uptime Kuma**/Statping/Shynet)
 	- `$ cd ~/Containers/UptimeKuma`
+	- `# docker-compose up -d`
+	- `# docker-compose down --volumes`
+	- `# docker-compose push`
 	- `# docker stack deploy --compose-file docker-compose.yml uptimek`
-- Personal Cloud ([NextCloud](https://nextcloud.com/))
+- LibreNMS (🤷)
+- Personal Cloud
 	- `$ cd ~/Containers/Nextcloud`
+	- `# docker-compose up -d`
+	- `# docker-compose down --volumes`
+	- `# docker-compose push`
 	- `# docker stack deploy --compose-file docker-compose.yml nextcloud`
-- VS Code Server ([Code-Server](https://github.com/cdr/code-server))
+- Code Server
 	- `$ cd ~/Containers/CodeServer`
+	- `# docker-compose up -d`
+	- `# docker-compose down --volumes`
+	- `# docker-compose push`
 	- `# docker stack deploy --compose-file docker-compose.yml codeserver`
-- [Drupal](https://www.drupal.org)
+- Drupal
 	- `$ cd ~/Containers/Drupal`
+	- `# docker-compose up -d`
+	- `# docker-compose down --volumes`
+	- `# docker-compose push`
 	- `# docker stack deploy --compose-file docker-compose.yml drupal`
-- Pastebin ([Snippet Box](https://github.com/pawelmalak/snippet-box))
+- Pastebin
 	- `$ cd ~/Containers/Pastebin`
+	- `# docker-compose up -d`
+	- `# docker-compose down --volumes`
+	- `# docker-compose push`
 	- `# docker stack deploy --compose-file docker-compose.yml pastebin`
-- Notes ([Trilium](https://github.com/zadam/trilium))
+- Notes
 	- `$ cd ~/Containers/Notes`
-	- `# docker stack deploy --compose-file docker-compose.yml notes`-
-- 
+	- `# docker-compose up -d`
+	- `# docker-compose down --volumes`
+	- `# docker-compose push`
+	- `# docker stack deploy --compose-file docker-compose.yml notes`
+-
